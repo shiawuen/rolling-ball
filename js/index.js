@@ -35,6 +35,7 @@ function init() {
   /**
    * 2. Listen on accelerometer state update
    */
+
   accelerathor.watch(
       onAccelerometerUpdate
     , onAccelerometerError
@@ -44,16 +45,18 @@ function init() {
   /**
    * 3. Intialize the state of the ball
    */
+
   ball = new Ball(byId('ball'));
   // More stuff
 
 
   /**
-   * 4. Wiring up the drawing for the ball movement
+   * 4. Rock'n'Roll
    */
 
   animate();
 }
+
 
 /**
  * Animatate the ball
@@ -67,7 +70,7 @@ function move() {
 
 
   // Move the ball!!!
-
+  
 }
 
 
