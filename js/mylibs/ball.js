@@ -38,14 +38,14 @@ function Ball(element, stage) {
 
 }
 
+
 /**
  * Move the ball to another point
  *
- * @param {Float} x
- * @param {Float} y
+ * @param {Acceleration} acceleration
  * @api public
  */
-Ball.prototype.moveTo = function(x, y) {
+Ball.prototype.moveTo = function(acceleration) {
   var self = this;
 };
 
@@ -55,7 +55,7 @@ Ball.prototype.moveTo = function(x, y) {
  *
  * @api public
  */
-Ball.prototype.center = function() {
+Ball.prototype.moveToCenter = function() {
   var centerX = (this.stageDimension.width - this.dimension.width) / 2;
   var centerY = (this.stageDimension.height - this.dimension.height) / 2;
 
