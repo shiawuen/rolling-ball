@@ -51,7 +51,7 @@ function init() {
    */
 
   ball = new Ball(byId('ball'));
-  ball.center();
+  ball.moveToCenter();
 
   /**
    * 3. Rock'n'Roll
