@@ -21,8 +21,8 @@ window.Ball = Ball;
  * @api public
  */
 function Ball(element, stage) {
-  // Default stage to body
-  stage || (stage = document.body);
+  // Default stage to document
+  stage || (stage = document);
 
   this.elem = element;
   this.stage = stage;
@@ -32,8 +32,8 @@ function Ball(element, stage) {
     , height: element.offsetHeight
   };
   this.stageDimension = {
-      width: stage.offsetWidth
-    , height: stage.offsetHeight
+      width: stage.width
+    , height: stage.height
   };
 
 }
