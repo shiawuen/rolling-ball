@@ -21,19 +21,19 @@ window.Ball = Ball;
  * @api public
  */
 function Ball(element, stage) {
-  // Default stage to document
-  stage || (stage = document);
+  // Default stage to body
+  stage || (stage = document.body);
 
   this.elem = element;
   this.stage = stage;
 
   this.dimension = {
-      width: element.width
-    , height: element.height
+      width: element.offsetWidth
+    , height: element.offsetHeight
   };
   this.stageDimension = {
-      width: stage.width
-    , height: stage.height
+      width: stage.offsetWidth
+    , height: stage.offsetHeight
   };
 
 }
@@ -53,16 +53,12 @@ Ball.prototype.moveTo = function(x, y) {
 /**
  * Move the ball to the center of the stage
  *
- * @param {Float} x
- * @param {Float} y
  * @api public
  */
 Ball.prototype.center = function() {
-  var self = this;
-  
-  var centerX = (this.stageDimension.width - this.dimension.width) / 2;
-  var centerY = (this.stageDimension.height - this.dimension.height) / 2;
-console.log(this.elem);
+  var centerX = ~~(this.stageDimension.width - this.dimension.width) / 2;
+  var centerY = ~~(this.stageDimension.height - this.dimension.height) / 2;
+
   this.elem.style.top = centerX +'px';
   this.elem.style.left = centerY +'px';
 };
