@@ -27,16 +27,24 @@ var acceleration;
 var options = { frequency: 500 };
 
 
-global.addEventListener('deviceready', onDeviceReady, false);
+global.addEventListener('load', onDeviceReady, false);
 global.addEventListener('DOMContentLoaded', init, false);
 
 
 function onDeviceReady() {
+
+  /**
+   * Feature dectect
+   */
+  
+  if (typeof navigator.accelerometer === 'undefined')
+    navigator.accelerometer = new Accelerometer;
+
   /**
    * 1. Listen on accelerometer state update
    */
 
-  accelerathor.watch(
+  navigator.accelerometer.watchAcceleration(
       onAccelerometerUpdate
     , onAccelerometerError
     , options);
@@ -71,9 +79,8 @@ function move() {
   if (typeof acceleration === 'undefined')
     return;
 
-
   // Move the ball!!!
-
+  ball.moveTo(acceleration);
 }
 
 
