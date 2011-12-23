@@ -56,11 +56,11 @@ Ball.prototype.moveTo = function(x, y) {
  * @api public
  */
 Ball.prototype.center = function() {
-  var centerX = ~~(this.stageDimension.width - this.dimension.width) / 2;
-  var centerY = ~~(this.stageDimension.height - this.dimension.height) / 2;
+  var centerX = (this.stageDimension.width - this.dimension.width) / 2;
+  var centerY = (this.stageDimension.height - this.dimension.height) / 2;
 
-  this.elem.style.top = centerX +'px';
-  this.elem.style.left = centerY +'px';
+  this.elem.style.top = ~~centerX +'px';
+  this.elem.style.left = ~~centerY +'px';
 };
 
 })();
