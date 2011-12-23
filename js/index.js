@@ -58,7 +58,7 @@ function init() {
    * move it to the center of stage
    */
 
-  ball = new Ball(byId('ball'));
+  ball = new Ball(document.getElementById('ball'));
   ball.moveToCenter();
 
   /**
