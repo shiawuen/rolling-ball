@@ -2,11 +2,11 @@ This project is created to test the usage of the
 Accelerometer functionality of PhoneGap provide to
 better understand how it works.
 
-### TODO
+## TODO
 - Better algorithms for moving the ball
 
 
-### License
+## License
 Copyright (c) 2011 Tan Shiaw Uen &lt;shiawuen@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
