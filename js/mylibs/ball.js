@@ -27,8 +27,8 @@ function Ball(element, stage) {
 
   var stageWidth = stage.width
     , stageHeight = stage.height
-    , elemWidth = elem.offsetWidth
-    , elemHeight = elem.offsetHeight;
+    , elemWidth = element.offsetWidth
+    , elemHeight = element.offsetHeight;
 
   this.elem = element;
   this.stage = stage;
@@ -71,5 +71,6 @@ Ball.prototype.moveToCenter = function() {
   this.elem.style.top = this.center.y +'px';
   this.elem.style.left = this.center.x +'px';
 };
+
 
 })();
