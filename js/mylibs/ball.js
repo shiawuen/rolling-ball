@@ -23,13 +23,13 @@ window.Ball = Ball;
 function Ball(element, stage) {
   // Default stage to document
   stage || (stage = document);
-    
+
   this.elem = element;
   this.stage = stage;
 
   this.dimension = {
-      width: elem.width
-    , height: elem.height
+      width: element.width
+    , height: element.height
   };
   this.stageDimension = {
       width: stage.width
@@ -61,8 +61,8 @@ Ball.prototype.center = function() {
   var self = this;
   
   var centerX = (this.stageDimension.width - this.dimension.width) / 2;
-  var centerY = (this.stageDimension.height - this.dimension.width) / 2;
-
+  var centerY = (this.stageDimension.height - this.dimension.height) / 2;
+console.log(this.elem);
   this.elem.style.top = centerX +'px';
   this.elem.style.left = centerY +'px';
 };

@@ -3,7 +3,7 @@
 /**
  * Local cache
  */
-var requestAnimFrame = window.requestAnimFrame;
+var requestAnimationFrame = window.requestAnimationFrame;
 
 
 /**
@@ -44,7 +44,7 @@ function init() {
 
   /**
    * 3.
-   * Intialize the state of the ball and 
+   * Intialize the state of the ball and
    * move it to the center of stage
    */
 
@@ -72,12 +72,12 @@ function move() {
 
 
   // Move the ball!!!
-  
+
 }
 
 
 function animate() {
-  requestAnimFrame(animate);
+  requestAnimationFrame(animate);
   move();
 }
 
