@@ -43,11 +43,13 @@ function init() {
 
 
   /**
-   * 3. Intialize the state of the ball
+   * 3.
+   * Intialize the state of the ball and 
+   * move it to the center of stage
    */
 
   ball = new Ball(byId('ball'));
-  // More stuff
+  ball.center();
 
 
   /**
