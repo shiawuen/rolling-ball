@@ -21,13 +21,14 @@ window.Ball = Ball;
  * @api public
  */
 function Ball(element, stage) {
+
+  // Default stage to document
+  stage || (stage = document);
+
   var stageWidth = stage.width
     , stageHeight = stage.height
     , elemWidth = elem.offsetWidth
     , elemHeight = elem.offsetHeight;
-
-  // Default stage to document
-  stage || (stage = document);
 
   this.elem = element;
   this.stage = stage;
