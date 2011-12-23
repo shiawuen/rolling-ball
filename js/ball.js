@@ -60,7 +60,8 @@ function Ball(element, stage) {
 /**
  * Move the ball to another point based on acceleration
  *
- * @param {Acceleration} acceleration
+ * @param {Float} ax Acceleration for x-axis
+ * @param {Float} ay Acceleration for y-axis
  * @api public
  */
 Ball.prototype.moveTo = function(ax, ay) {
