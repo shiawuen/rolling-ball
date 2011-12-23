@@ -21,6 +21,11 @@ window.Ball = Ball;
  * @api public
  */
 function Ball(element, stage) {
+  var stageWidth = stage.width
+    , stageHeight = stage.height
+    , elemWidth = elem.offsetWidth
+    , elemHeight = elem.offsetHeight;
+
   // Default stage to document
   stage || (stage = document);
 
@@ -28,12 +33,18 @@ function Ball(element, stage) {
   this.stage = stage;
 
   this.dimension = {
-      width: element.offsetWidth
-    , height: element.offsetHeight
+      width: elemWidth
+    , height: elemHeight
   };
+
   this.stageDimension = {
-      width: stage.width
-    , height: stage.height
+      width: stageWidth
+    , height: stageHeight
+  };
+
+  this.center = {
+      x: ~~ ((stageWidth - elemWidth) / 2)
+    , y: ~~ ((stageHeight - elemHeight) / 2)
   };
 
 }
@@ -46,7 +57,7 @@ function Ball(element, stage) {
  * @api public
  */
 Ball.prototype.moveTo = function(acceleration) {
-  var self = this;
+
 };
 
 
@@ -56,11 +67,8 @@ Ball.prototype.moveTo = function(acceleration) {
  * @api public
  */
 Ball.prototype.moveToCenter = function() {
-  var centerX = (this.stageDimension.width - this.dimension.width) / 2;
-  var centerY = (this.stageDimension.height - this.dimension.height) / 2;
-
-  this.elem.style.top = ~~centerY +'px';
-  this.elem.style.left = ~~centerX +'px';
+  this.elem.style.top = this.center.y +'px';
+  this.elem.style.left = this.center.x +'px';
 };
 
 })();
