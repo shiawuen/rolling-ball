@@ -27,23 +27,25 @@ var acceleration;
 var options = { frequency: 500 };
 
 
-global.addEventListener('deviceready', init);
+global.addEventListener('deviceready', onDeviceReady, false);
+global.addEventListener('DOMContentLoaded', init, false);
 
 
-function init() {
-
+function onDeviceReady() {
   /**
-   * 2. Listen on accelerometer state update
+   * 1. Listen on accelerometer state update
    */
 
   accelerathor.watch(
       onAccelerometerUpdate
     , onAccelerometerError
     , options);
+}
 
+function init() {
 
   /**
-   * 3.
+   * 2.
    * Intialize the state of the ball and
    * move it to the center of stage
    */
@@ -51,9 +53,8 @@ function init() {
   ball = new Ball(byId('ball'));
   ball.center();
 
-
   /**
-   * 4. Rock'n'Roll
+   * 3. Rock'n'Roll
    */
 
   animate();
