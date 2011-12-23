@@ -36,7 +36,7 @@ function onDeviceReady() {
   /**
    * Feature dectect
    */
-  
+
   if (typeof navigator.accelerometer === 'undefined')
     navigator.accelerometer = new Accelerometer;
 
@@ -80,7 +80,7 @@ function move() {
     return;
 
   // Move the ball!!!
-  ball.moveTo(acceleration);
+  ball.moveTo(acceleration.y, acceleration.x);
 }
 
 
